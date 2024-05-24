@@ -1,0 +1,20 @@
+{
+    "run_name": "paimon_ko",
+    "model": "glow_tts",
+    "batch_size": 32,
+    "eval_batch_size": 16,
+    "num_loader_workers": 4,
+    "num_eval_loader_workers": 4,
+    "run_eval": true,
+    "test_delay_epochs": -1,
+    "epochs": 1000,
+    //"text_cleaner": "korean_cleaners",
+    "use_phonemes": false,
+    "phoneme_language": "ko",
+    "phoneme_cache_path": "phoneme_cache",
+    "print_step": 25,
+    "print_eval": true,
+    "mixed_precision": false,
+    "output_path": "./paimon_ko",
+    "datasets":[{"formatter": "ljspeech", "meta_file_train":"metadata.txt", "path": "/home/pengejeen/paymon_v0.0.1/paimon_llama2-enhanced/tts_paimon/datasets"}]
+}
