@@ -12,6 +12,7 @@ RUN_NAME = "paimon_ko"
 PROJECT_NAME = "XTTS_trainer"
 DASHBOARD_LOGGER = "tensorboard"
 LOGGER_URI = None
+PATH = "/home/pengejeen/paymon_v0.0.1/paimon_llama2-enhanced/tts_paimon"
 
 # Set here the path that the checkpoints will be saved. Default: ./run/training/
 OUT_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "run", "training")
@@ -27,8 +28,8 @@ GRAD_ACUMM_STEPS = 84  # set here the grad accumulation steps
 config_dataset = BaseDatasetConfig(
     formatter="ljspeech",
     dataset_name="wavs",
-    path="/home/pengejeen/paymon_v0.0.1/paimon_llama2-enhanced/tts_paimon/datasets",
-    meta_file_train="/home/pengejeen/paymon_v0.0.1/paimon_llama2-enhanced/tts_paimon/datasets/metadata.txt",
+    path=f"{PATH}/datasets",
+    meta_file_train="{PATH}/datasets/metadata.txt",
     language="ko",
 )
 
