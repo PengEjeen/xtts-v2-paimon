@@ -29,7 +29,7 @@ config_dataset = BaseDatasetConfig(
     formatter="ljspeech",
     dataset_name="wavs",
     path=f"{PATH}/datasets",
-    meta_file_train="{PATH}/datasets/metadata.txt",
+    meta_file_train="./datasets/metadata.txt",
     language="ko",
 )
 
