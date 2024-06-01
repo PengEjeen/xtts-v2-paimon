@@ -29,7 +29,7 @@ config_dataset = BaseDatasetConfig(
     formatter="ljspeech",
     dataset_name="wavs",
     path=f"{PATH}/datasets",
-    meta_file_train="./datasets/metadata.txt",
+    meta_file_train=f"{PATH}/datasets/metadata.txt",
     language="ko",
 )
 
@@ -73,7 +73,7 @@ if not os.path.isfile(TOKENIZER_FILE) or not os.path.isfile(XTTS_CHECKPOINT):
 
 # Training sentences generations
 SPEAKER_REFERENCE = [
-    "/home/pengejeen/paymon_v0.0.1/paimon_llama2-enhanced/tts_paimon/datasets/wavs/1_audio.wav",  # speaker reference to be used in training test sentences
+    f"{PATH}/datasets/wavs/1_audio.wav",  # speaker reference to be used in training test sentences
 ]
 LANGUAGE = config_dataset.language
 
@@ -117,7 +117,7 @@ def main():
         eval_split_max_size=256,
         print_step=50,
         plot_step=100,
-        epochs=2,
+        epochs=1000,
         log_model_step=1000,
         save_step=10000,
         save_n_checkpoints=1,
