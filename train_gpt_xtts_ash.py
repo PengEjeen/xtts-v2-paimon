@@ -117,7 +117,7 @@ def main():
         eval_split_max_size=256,
         print_step=50,
         plot_step=100,
-        epochs=2,
+        epochs=1000,
         log_model_step=1000,
         save_step=10000,
         save_n_checkpoints=1,
